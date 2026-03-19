@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#1a1916">
 <title>Gestion des Réceptions</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap');
@@ -18,7 +19,9 @@
   --r:8px;--rl:12px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);height:100vh;overflow:hidden;font-size:14px}
+<script>
+if('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');
+</script>body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);height:100vh;overflow:hidden;font-size:14px}
 .app{display:flex;height:100vh}
 /* SIDEBAR */
 .sidebar{width:268px;min-width:268px;background:var(--sur);border-right:1px solid var(--bd);display:flex;flex-direction:column;overflow:hidden}
